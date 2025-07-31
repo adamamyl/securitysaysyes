@@ -30,7 +30,7 @@ url: "https://www.securitysaysyes.com" # the base hostname & protocol for your s
 github_username:  adamamyl
 
 # Build settings
-theme: minima
+theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
 
