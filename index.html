@@ -2,4 +2,30 @@
 layout: default
 title: Home
 ---
-<h1>{{ "Hello World!" | downcase }}</h1>
+<h1>Security Says Yes</h1>
+<p>Welcome to my blog, where, assuming I don't get bored/busy and abandon it, I'll post about 
+    <ul>
+      <li>permissive securtiy cultures</li>
+      <li>how to not be a blocker</li> 
+      <li>sharing some ideas of things that I've found useful</li>
+      <li>possibly an occassional rant</li>
+      <li>laughably, some of this might be considered <em>thought leadership</em></li>
+    </ul>
+</p>
+
+<p>Content here is available to use, but please credit me, and don't sell it onwards, in other words
+    <ul>
+        <li>it's licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">Attribution-NonCommercial 4.0 International</a> model</a>. 
+        <li>Any code snippets, unless otherwise stated are <a href="https://opensource.org/license/mit"></a>MIT Licensed</a>.</li>
+    </ul>
+</p>
+<p>If you want to share the changes you've made, let me know, and/or start/contribute to a <a href="https://github.com/adamamyl/securitysaysyes/discussions">discussion on GitHub</a></a></p></li></p>
+<hr />
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      {{ post.excerpt }}
+    </li>
+  {% endfor %}
+</ul>
