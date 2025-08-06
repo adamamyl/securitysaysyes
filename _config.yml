@@ -30,10 +30,13 @@ github_username:  adamamyl
 # Build settings
 #theme: minima
 #theme: jekyll-theme-cayman
-remote_theme: pages-themes/cayman@v0.2.0
+remote_theme: pages-themes/midnight@v0.2.0
+
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
 - jekyll-feed
+- jekyll-sitemap
+- jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -43,14 +46,29 @@ plugins:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# https://jekyllrb.com/docs/permalinks/
+# extensionless.
+permalink: /:categories/:year-:month-:day/:title
